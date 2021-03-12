@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>converter</title>
+</head>
+<body>
+     
+    number<input type="text" id="num" > <br>
+    number <input type="text" id="nam"><br><br>
+    Result <input type="text" id="add"><br><br>
+
+
+
+
+    <button><input type="submit" id="btn1" value="+"></button>
+    <button> <input type="submit" id="btn2" value="-"></button>
+    <button><input type="submit" id="btn3" value="*"></button>
+    <button> <input type="submit" id="btn4" value="/"></button><br><br>
+
+
+
+
+    <input type="text" id="kilomiter"  placeholder="meter entry"> <br>
+
+   <input type="submit" value=" convert to meter" id="convert"><br>
+   <input type="text" id="resul"  placeholder="Result"> <br><br>
+   
+
+   <input type="text" id="inchi"  placeholder="inchi entry"> <br>
+
+   <input type="submit" value=" convert to fit" id="convertinchi"><br>
+   <input type="text" id="result"  placeholder="Result"> <br><br>
+
+
+   <h2>Right Click off</h2>
+  
+
+  
+
+
+
+    <script>
+        var btn=document.getElementById("btn1").addEventListener("click",function () {
+            var num=Number(document.getElementById("num").value);
+            var nam=Number(document.getElementById("nam").value);
+            var resul=num+nam;
+            var add=document.getElementById("add").value=resul;
+            
+        })
+        var btn=document.getElementById("btn2").addEventListener("click",function () {
+            var num=Number(document.getElementById("num").value);
+            var nam=Number(document.getElementById("nam").value);
+            var resul=num-nam;
+
+            document.write(resul);
+            
+        })
+
+        var btn=document.getElementById("btn3").addEventListener("click",function () {
+            var num=Number(document.getElementById("num").value);
+            var nam=Number(document.getElementById("nam").value);
+            var resul=num*nam;
+
+            document.write(resul);
+            
+        })
+
+
+        var btn=document.getElementById("btn4").addEventListener("click",function () {
+            var num=Number(document.getElementById("num").value);
+            var nam=Number(document.getElementById("nam").value);
+            var resul=num/nam;
+
+            document.write(resul);
+            
+        })
+
+      
+
+
+         document.addEventListener("contextmenu",function (mizan) {
+             mizan.preventDefault();
+             
+         });
+
+
+
+         var convert=document.getElementById("convert").addEventListener("click",function () {
+             var kilomiter=document.getElementById("kilomiter").value;
+             var input=kilomiter/1000;
+             var Result=document.getElementById("resul").value=input+"kilomiter";
+         
+
+         })
+
+
+         
+         var convert=document.getElementById("convertinchi").addEventListener("click",function () {
+             var kilomiter=document.getElementById("inchi").value;
+             var input=kilomiter/12;
+             var Result=document.getElementById("result").value=input+"fit";
+         
+
+         })
+
+    </script>
+    
+</body>
+</html>
